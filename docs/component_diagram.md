@@ -51,5 +51,13 @@ consoleDriver --> console : writes to
 jsonDriver --> jsonFile : writes to
 textDriver --> textFile : writes to
 
+note right of [Config Loader]
+  Configuration supports:
+  - YAML format
+  - JSON format
+  - Environment variables
+  - Default values
+end note
+
 @enduml
 ``` 

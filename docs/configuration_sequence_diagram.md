@@ -9,10 +9,10 @@ participant "Logger" as logger
 
 == Configuration Loading ==
 
-Client -> config : LoadFromFile("config.yaml")
+Client -> config : LoadFromFile("config.yaml") or LoadFromFile("config.json")
 activate config
-config -> config : Read and parse YAML config
-note right: Load driver configs
+config -> config : Read and parse YAML/JSON config
+note right: Supports both YAML and JSON formats
 
 config --> Client : return Config object
 deactivate config

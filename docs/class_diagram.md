@@ -131,6 +131,7 @@ package "config" {
     +LoadDefault(): (*Config, error)
     +CreateLogger(): (core.Logger, error)
     +SaveToFile(path string): error
+    note right: Supports both YAML and JSON formats
   }
 
   class DriverConfig {
