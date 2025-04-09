@@ -56,4 +56,6 @@ These diagrams are written in PlantUML, which is a text-based format for creatin
 - The **Sequence Diagrams** show the dynamic behavior of the system
 - The **Component Diagram** shows the high-level structure and dependencies
 
-Together, these diagrams provide a comprehensive view of the logging package's architecture and design. 
+Together, these diagrams provide a comprehensive view of the logging package's architecture and design.
+
+- `component_diagram.md`: High-level components and their relationships (architectural view) 
