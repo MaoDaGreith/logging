@@ -9,6 +9,7 @@ A simple and flexible logging library for Go applications.
 - Thread-safe logging
 - Support for structured logging
 - Easy to extend with custom drivers
+- Configuration via JSON or YAML files
 
 ## Installation
 
@@ -55,7 +56,39 @@ func main() {
 
 ## Configuration
 
-The library can be configured via a JSON configuration file:
+The library can be configured via JSON or YAML configuration files. A sample configuration file (`config.yaml.sample`) is provided in the root directory.
+
+### YAML Configuration Example
+
+```yaml
+logging:
+  level: info
+  timestamp_format: "2006-01-02 15:04:05.000"
+  
+  drivers:
+    - type: console
+      options:
+        format: text
+        output: stdout
+        colors: true
+    
+    - type: json_file
+      options:
+        file_path: "logs/app.json"
+        max_size: 10485760    # 10MB
+        max_backups: 5
+        max_age: 30
+    
+    - type: text_file
+      options:
+        file_path: "logs/app.log"
+        max_size: 10485760    # 10MB
+        max_backups: 5
+        max_age: 30
+        format: "[%timestamp%] [%level%] %message%"
+```
+
+### JSON Configuration Example
 
 ```json
 {
@@ -75,6 +108,13 @@ The library can be configured via a JSON configuration file:
   ]
 }
 ```
+
+The library looks for configuration in these locations:
+1. Path specified in `LOGGING_CONFIG_PATH` environment variable
+2. `config/logging.json`
+3. `/etc/logging/config.json`
+
+If no configuration is found, it falls back to a default configuration with just a console driver.
 
 ## Extending with Custom Drivers
 
