@@ -150,4 +150,4 @@ drivers.JSONFileDriver ..> core.LogEntry : processes
 drivers.TextFileDriver ..> core.LogEntry : processes
 drivers.DriverRegistry ..> core.Driver : creates
 
-@enduml
+@enduml 

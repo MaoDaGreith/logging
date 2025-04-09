@@ -4,7 +4,7 @@ This directory contains UML diagrams that document the design and architecture o
 
 ## Diagrams
 
-### Class Diagram (`class_diagram.md`)
+### Class Diagram (`class_diagram.puml`)
 
 The class diagram illustrates the static structure of the system, showing:
 - The core interfaces and classes (`Logger`, `Transaction`, `Driver`)
@@ -16,7 +16,7 @@ This diagram is useful for understanding the overall architecture of the package
 
 ### Sequence Diagrams
 
-#### Basic Logging Process (`sequence_diagram.md`)
+#### Basic Logging Process (`sequence_diagram.puml`)
 
 This sequence diagram shows the interactions between components during:
 1. Basic logging operations (e.g., `logger.Info()`)
@@ -25,7 +25,7 @@ This sequence diagram shows the interactions between components during:
 
 It illustrates how log entries flow through the system from the client code to the various output destinations.
 
-#### Configuration Process (`configuration_sequence_diagram.md`)
+#### Configuration Process (`configuration_sequence_diagram.puml`)
 
 This sequence diagram focuses on the configuration aspects of the system:
 1. Loading configuration from a file
@@ -33,7 +33,7 @@ This sequence diagram focuses on the configuration aspects of the system:
 3. Constructing a logger with the configured drivers
 4. Using the configured logger
 
-### Component Diagram (`component_diagram.md`)
+### Component Diagram (`component_diagram.puml`)
 
 The component diagram provides a high-level view of the system, showing:
 - Major components and their grouping into packages
@@ -57,5 +57,3 @@ These diagrams are written in PlantUML, which is a text-based format for creatin
 - The **Component Diagram** shows the high-level structure and dependencies
 
 Together, these diagrams provide a comprehensive view of the logging package's architecture and design.
-
-- `component_diagram.md`: High-level components and their relationships (architectural view) 
